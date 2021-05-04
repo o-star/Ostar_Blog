@@ -15,7 +15,7 @@ module.exports = {
       path: '/'
     },
     {
-      label: 'CV',
+      label: 'Profile',
       path: '/cv'
     }
   ],
@@ -28,7 +28,7 @@ module.exports = {
       // https://github.com/gatsbyjs/gatsby/issues/2392
       github: 'o-star',
       instagram: 'o_star.1',
-      facebook: 'o_star.1'
+      facebook: 'oh.jeongseok.56'
     }
   }
 }
