@@ -1,15 +1,102 @@
 ---
 template: post
-title: '[Reverse interview: Questions to ask the company during your interview
-](https://github.com/dospolov/reverse-interview)'
-slug: /posts/reverse-interview
+title: "[React] JSX"
 draft: false
 priority: 0
-date: 2020-05-06T13:23:37.121Z
+date: 2021-01-22
 description: >-
   List of the questions from dev to the company.
   Fork it or use it as is.
-category: programming
+category: Web
 tags:
-  - interview
+  - React
 ---
+
+# JSX
+
+JSX를 본격적으로 훑어보기 전에 우리가 JSX에 대해 충분히 숙지하고 사용해야 하는 것엔 이유가 있다.
+
+리액트의 큰 특징등 중 하나가 바로 JSX이다.
+
+리액트의 특징들
+
+- JSX 문법 : 마크업 언어들을 자바스크립트 내부에 사용할 수 있고 중괄호를 통해 변수, 함수들을 자유롭게 사용할 수 있게 기능을 제공함으로써 동적 웹페이지 구성에 더 자유로워지게 도움을 주었다.
+- Component 기반 : props를 input으로 하고 UI View를 정의하는 React element를 output으로 하는 함수, 클래스. 재사용성과 유지보수성을 증가시켜주는 효과를 가져왔다.
+- Virtual DOM : 렌더링이 필요한 부분과 필요하지 않은 부분을 자동으로 감지하여 업데이트 시켜주는 가상 돔을 둠으로써, 렌더링의 최적화 효과를 가져옴.
+
+그렇다면 리액트의 주요 특징들 중 하나인 JSX는 구체적으로 무엇일까?
+
+### JSX란?
+
+Javascript + XML을 합쳐 확장한 기존 자바스크립트의 확장 문법이다.
+
+기존 자바스크립트 문법과 비교하여 JSX의 큰 장점으로는 두 가지가 있다.
+
+1. 자바스크립트 내부에 마크업 코드를 작성할 수 있다.
+2. 단순히 XML 뿐 만 아니라 변수나 프로퍼티의 바인딩 기능을 제공한다.
+
+구체적으로 JSX 문법에 대해 살펴보자
+
+```jsx
+class App extends React.Component {
+  constructor() {
+    super();  // javascript 규정으로 this 키워드를 사용하기 위해선 super()를 반드시 명시해야 함.
+    this.element = <h1>This is Element!</h1>;   // 마크업 언어를 javascript 내부에서 사용하고 있음.
+  }
+  render() {
+    return (
+      this.element
+    );
+  }
+}
+```
+
+마크업 언어를 자바스크립트 내부에서 사용한 기초적인 예이다. 본 코드로 코딩하게 되면 <h1>This is Element!</h1> 태그가 화면에 렌더링 된다.
+
+```jsx
+class App extends React.Component {
+  constructor() {
+    super()
+    this.element = <h1>This is Element!</h1>
+    this.name = "ostar"
+  }
+  repeatElements(n) {
+    let elements = [];
+    for (let i = 0; i < n; i++)
+      elements.push(this.element)
+    return elements
+  }
+  render() {
+    return (
+      <div>
+        {this.repeatElements(5)}
+      </div>
+    );
+  }
+}
+```
+
+다음 코드와 같이 마크업 언어가 저장된 변수를 리스트로 여러개 저장해서 출력에 사용하더라도 문제없이 리스트의 저장된 모든 마크업 언어들을 출력할 수 있다. 본 코드에서는 "This is Element" 내용을 5번 반복 화면 출력하게 된다.
+
+```jsx
+class App extends React.Component {
+  constructor() {
+    super()
+    this.element = <h1>This is Element!</h1>
+    this.name = "ostar"
+  }
+  render() {
+    return (
+      <h1>What's your name?! : My name is {this.name}</h1>
+    );
+  }
+}
+```
+
+this.name 변수를 렌더링할 태그 내용물에 중괄호를 사용하여 주입한 형태이다.
+
+또 JSX 문법에서 간단하게 알아둬야 할 것을 몇가지 짚고 넘어가자.
+
+- JSX 문법에서는 on 이벤트들을 사용할 때 이벤트 종류 첫글자를 반드시 대문자로 사용해야 한다. (ex. onClick)
+- JSX 주석은 {/* ... */} 형태를 가진다.
+- JSX 문법에서는 style을 설정할 경우 String을 사용하지 않고 key를 camelCase로 작성해 사용한다.
