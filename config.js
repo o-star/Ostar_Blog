@@ -21,7 +21,7 @@ module.exports = {
   ],
   author: {
     name: 'Ostar',
-    photo: '/profile_image.jpeg',
+    photo: '/profile_image.jpg',
     bio: 'Jeong Seok Oh',
     contacts: {
       // don't remove fields, just make them empty string ''

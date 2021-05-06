@@ -4,3 +4,7 @@
 
 previous blog link : https://www.notion.so/ostarstudyroom/O-star-StudyRoom-b08350f637df436c9d48238c2572e0fa
 
+
+
+Current blog link : [https://ostarblog.netlify.app](https://ostarblog.netlify.app/)
+
