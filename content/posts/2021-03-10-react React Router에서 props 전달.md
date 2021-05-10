@@ -10,6 +10,7 @@ description: >-
 category: Web
 tags:
   - React
+  - Front-end
 ---
 
 # Tip. React Router에서 컴포넌트 props 전달하기

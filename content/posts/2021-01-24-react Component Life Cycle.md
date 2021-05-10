@@ -10,6 +10,7 @@ description: >-
 category: Web
 tags:
   - React
+  - Front-end
 ---
 
 # Component Life Cycle
