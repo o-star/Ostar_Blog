@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { useCategoriesList } from '../../../hooks'
+import '../../../assets/css/Categories.css'
 
 const Categories = () => {
   const categories = useCategoriesList()
@@ -12,7 +13,7 @@ const Categories = () => {
           <li className="mb-3" key={category.fieldValue}>
             <Link
               to={`/category/${category.fieldValue}`}
-              className="align-bottom"
+              className="align-bottom category-item-style"
               activeClassName="current-page"
             >
               <span

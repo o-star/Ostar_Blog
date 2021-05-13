@@ -1,0 +1,15 @@
+
+.sidebar-style {
+    animation: sidebar-anim 1s 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes sidebar-anim {
+    from {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

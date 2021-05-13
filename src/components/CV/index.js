@@ -13,12 +13,18 @@ import Recommendations from './Recommendations'
 import Footer from './Footer'
 import data from './data.json'
 
+import Portfolio from '../../../static/portfolio.jpg'
+
 const { Content } = Layout
 const CV = () => (
   <>
     <Sidebar hideMobile={true} />
-    <Content className="m-5">
-      {data.header && <Header header={data.header} />}
+    <Content className="m-5" style={{
+      height: '1300px',
+      backgroundImage: `url(${Portfolio})`,
+      backgroundSize: "100% 100%"
+    }}>
+      {/* {data.header && <Header header={data.header} />}
       {data.experiments && (
         <Experiments experiments={data.experiments} tech={data.tech} />
       )}
@@ -29,7 +35,7 @@ const CV = () => (
       {data.volunteer && <Volunteer volunteer={data.volunteer} />}
       {data.education && <Education education={data.education} />}
       {data.recommendations && <Recommendations recommendations={data.recommendations} />}
-      {data.footer && <Footer footer={data.footer} />}
+      {data.footer && <Footer footer={data.footer} />} */}
     </Content>
   </>
 )

@@ -6,6 +6,7 @@ import Menu from './Menu'
 import Categories from './Categories'
 import Tags from './Tags'
 import { useSiteMetadata } from '../../hooks'
+import '../../assets/css/Sidebar.css'
 
 const { Sider } = Layout
 
@@ -13,7 +14,7 @@ const Sidebar = ({ hideMobile }) => {
   const { author, menu } = useSiteMetadata()
 
   return (
-    <Sider className={`text-white no-print ${hideMobile && 'hide-mobile'}`}>
+    <Sider className={`text-white no-print ${hideMobile && 'hide-mobile'} sidebar-style`}>
       <Author author={author} />
       <Contacts contacts={author.contacts} />
       <Divider className="sidebar-divider" />

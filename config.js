@@ -5,7 +5,7 @@ module.exports = {
   keywords:
     'account surfer, trello bookmark, trello, productivity, javascript, Marat Dospolov, choosy windows, browser selector',
   subtitle: 'Developer. Optimizer. Learner.',
-  copyright: `© ${new Date().getFullYear()} | Kyiv, Ukraine`,
+  copyright: `© ${new Date().getFullYear()} | Ostar`,
   disqusShortname: 'dospolov',
   postsPerPage: 20,
   googleAnalyticsId: 'UA-6589522-7',

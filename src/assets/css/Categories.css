@@ -1,0 +1,9 @@
+
+nav h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.category-item-style:hover {
+    color: rgb(146, 214, 20);
+}

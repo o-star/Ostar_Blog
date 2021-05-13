@@ -7,7 +7,7 @@ const CvTemplate = () => {
   const { author } = useSiteMetadata()
 
   return (
-    <Layout title={`${author.name} | CV`} className="bg-black">
+    <Layout title={`${author.name} | Profile`} className="bg-black">
       <CV />
     </Layout>
   )

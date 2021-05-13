@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Tag } from 'antd'
 import { useTagsList } from '../../../hooks'
+import '../../../assets/css/Tags.css'
 
 const Tags = () => {
   const tags = useTagsList()
@@ -15,7 +16,7 @@ const Tags = () => {
           className="align-bottom"
           activeClassName="current-page"
         >
-          <Tag>{tag.fieldValue}</Tag>
+          <Tag className="tag-item-style">{tag.fieldValue}</Tag>
         </Link>
       ))}
     </nav>

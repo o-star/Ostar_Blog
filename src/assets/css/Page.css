@@ -1,0 +1,12 @@
+
+.page-style {
+    animation: page-anim 1s 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes page-anim {
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
