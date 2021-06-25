@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "gatsby build"
+  command = "gatsby build && cp content/pages/googleac906eac94d94b23.html public/"
 [build.environment]
   YARN_VERSION = "1.22.4"
   YARN_FLAGS = "--no-ignore-optional"
