@@ -3,7 +3,7 @@ template: post
 title: "[React] Flux"
 draft: false
 priority: 0
-date: 2021-06-25
+date: 2021-06-26
 description: >-
   List of the questions from dev to the company.
   Fork it or use it as is.
@@ -72,9 +72,20 @@ Flux 패턴을 잘 이해하고 있다면 React 라이브러리는 물론이고 
 
 ### Dispatcher
 
-- 
+- 데이터 흐름에서 허브와 같은 역할을 한다. (애플리케이션 전체에서 1개뿐)
+- Action을 기준으로 Store에 데이터를 운반하는 간단한 함수 형태를 띈다.
+- 대규모 애플리케이션에서 실행 순서를 제어하면 의존 관계 해소를 도모할 수 있다.
 
+### **Store**
 
+- 애플리케이션에서 특정 도메인 상태를 관리한다.
+- Action을 거치지 않고서는 Store를 업데이트할 수 없다.
+- Store에서 변경이 일어나면 View에게 변경된 사실을 알려주게 된다.
+
+### **View**
+
+- Store의 상태를 감지하여 View 표현을 업데이트한다.
+- View는 Store를 구독(Subscription)한다.
 
 <br/>
 
