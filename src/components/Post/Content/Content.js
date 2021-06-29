@@ -26,7 +26,7 @@ const Content = ({ body, title, date, externalLink }) => (
           </time>{' '}
           {/* | {readingTime(body).text} */}
         </p>
-        <div className="" dangerouslySetInnerHTML={{ __html: body }} />
+        <div className="text-3xl" dangerouslySetInnerHTML={{ __html: body }} />
       </>
     )}
   </div>
