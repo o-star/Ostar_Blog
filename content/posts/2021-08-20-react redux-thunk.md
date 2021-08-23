@@ -95,6 +95,29 @@ Redux에서 비동기 작업을 처리할 때 흔하게 사용하는 미들웨�
 
 <br/>
 
+```javascript
+export const addToDo = element => {
+  return {
+    type: ADD_TODO,
+    payload: element
+  }
+}
+
+export const addToDoAsync = element => dispatch => {
+  setTimeout(() => {
+    dispatch(addToDo(element));
+  }, 1500);
+}
+```
+
+위 코드와 같이 redux-thunk는 액션 생성자에서 dispatch, getstate 인자를 받아 다양한 작업을 가능하게 한다.
+
+getstate를 통해 현재 state값을 가져와 작업을 진행할 수 있으며, dispatch를 통해 특정 액션을 디스패치할 수 있다.
+
+
+
+<br/>
+
 <br/>
 
 <br/>
