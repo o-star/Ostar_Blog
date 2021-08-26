@@ -10,7 +10,7 @@ import { useSiteMetadata } from '../hooks'
 const CategoryTemplate = ({ data, pageContext }) => {
   const { title: siteTitle, subtitle: siteSubtitle, keywords } = useSiteMetadata()
 
-  const {
+  let {
     category,
     currentPage,
     prevPagePath,
@@ -20,6 +20,7 @@ const CategoryTemplate = ({ data, pageContext }) => {
     allCategories
   } = pageContext
 
+  nextPagePath = nextPagePath.substr(1);
   const { edges } = data.allMarkdownRemark
   const pageTitle =
     currentPage > 0

@@ -21,6 +21,8 @@ const IndexTemplate = ({ data, pageContext }) => {
     allCategories
   } = pageContext
 
+  console.log(pageContext)
+
   const { edges } = data.allMarkdownRemark
   const pageTitle =
     currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle
